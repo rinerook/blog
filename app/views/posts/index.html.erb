@@ -1,1 +1,10 @@
-<h1>Hallo und willkommen auf der Index-Seite</h1>
+<h1>&Uuml;bersicht aller Beitr&auml;ge</h1>
+
+<% @posts.each do |post| %>
+	<h2><%= link_to post.title, post %></h2>
+  <p><%= post.content %></p>
+  <p><%= link_to "Beitrag Bearbeiten", edit_post_path(post) %></p>
+  <p><%= link_to "Beitrag löschen", post, :data => {:confirm => "Bist du sicher?"}, :method => :delete %></p>
+<% end %>
+
+<p><%= link_to "Neuen Beitrag erstellen", new_post_path %></p>
