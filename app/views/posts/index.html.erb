@@ -24,13 +24,10 @@
         <% end %>
       </div>
       <hr>
-      <!-- Pager -->
-      <ul class="pager">
-        <li class="next">
-          <a href="#">Older Posts &rarr;</a>
-        </li>
-      </ul>
+      <p><%= link_to "Neuen Beitrag erstellen", new_post_path %></p>
+
+      <!-- Pageination -->
+      <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
     </div>
   </div>
-  <p><%= link_to "Neuen Beitrag erstellen", new_post_path %></p>
 </div>
