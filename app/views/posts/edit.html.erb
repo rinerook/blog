@@ -1,5 +1,12 @@
 <h1>Beitrag bearbeiten</h1>
-
+<% if @post.errors.any? %>
+  <h2>Fehler:</h2>
+  <ul>
+    <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %> 
 <%= form_for @post do |f| %>
 	<p>
 	  <%= f.label :title %><br />
