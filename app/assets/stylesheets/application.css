@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ nav.navbar.navbar-default.navbar-custom.navbar-fixed-top {
+ 	background: black;
+ }
+
+ .main-content {
+ 	padding-top: 60px;
+ }
