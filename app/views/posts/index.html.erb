@@ -29,8 +29,8 @@
       <% if user_signed_in? %>
         <p><%= link_to "Neuen Beitrag erstellen", new_post_path %></p>
       <% end %>
-      <!-- Pageination -->
-      <%= will_paginate @posts, renderer: BootstrapPagination::Rails, class: 'pagination-sm' %>
+      <%= will_paginate @posts, :previous_label => t("zurück"), :next_label => t("vor"), renderer: BootstrapPagination::Rails, class: 'pagination-sm' %>
+
     </div>
   </div>
 </div>
