@@ -1,23 +1,40 @@
-<h1>Neuen Beitrag erstellen</h1>
-<% if @post.errors.any? %>
-  <h2>Fehler:</h2>
-  <ul>
-    <% @post.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %> 
-
-<%= form_for @post do |f| %>
-	<p>
-	  <%= f.label :title %><br />
-    <%= f.text_field :title, required: "required"  %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content, required: "required"  %>
-  </p> 
-  <p>
-  <%= f.submit "Beitrag speichern" %>
-  </p>
-<% end %>
+<header class="intro-header" style="background-image: url('../assets/post-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Neuen Beitrag erstellen</h1>
+          <% if @post.errors.any? %>
+          <h2>Fehler:</h2>
+          <ul>
+            <% @post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+          <% end %> 
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <%= form_for @post do |f| %>
+        <p>
+          <%= f.label :title %><br />
+          <%= f.text_field :title, required: "required"  %>
+        </p>
+        <p>
+          <%= f.label :content %><br />
+          <%= f.text_area :content, required: "required"  %>
+        </p>
+        <p>
+          <%= f.submit "Beitrag speichern" %>
+        </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</article>
