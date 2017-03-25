@@ -14,6 +14,8 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 #authentication
 gem 'devise'
+#authorization
+gem 'cancancan'
 # editor
 gem 'tinymce-rails'
 gem 'tinymce-rails-langs'

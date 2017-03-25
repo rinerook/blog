@@ -19,7 +19,7 @@
       <div class="post-preview">
         <h2 class="post-title"><%= link_to post.title, post %></h2>
         <p class="post-subtitle"><%= post.content.html_safe %></p>
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.admin? %>
           <p><%= link_to "bearbeiten", edit_post_path(post) %> | 
           <%= link_to "löschen", post, :data => {:confirm => "Bist du sicher?"}, :method => :delete %></p>
         <% end %>
