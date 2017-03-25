@@ -1,4 +1,4 @@
-<header class="intro-header" style="background-image: url('../../assets/post-bg.jpg')">
+
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -15,8 +15,7 @@
         </div>
       </div>
     </div>
-  </div>
-</header>   
+  </div>  
 <article>
   <div class="container">
     <div class="row">
@@ -24,11 +23,12 @@
         <%= form_for @post do |f| %>
       	  <p>
       	    <%= f.label :title %><br />
-            <%= f.text_field :title %>
+            <%= f.text_field :title, required: "required" %>
           </p>
           <p>
+            <%= tinymce  :language => "de" %>
             <%= f.label :content %><br />
-            <%= f.text_area :content %>
+            <%= f.text_area :content, :class => "tinymce" %>
           </p> 
           <p>
           <%= f.submit "Beitrag aktualisieren" %>

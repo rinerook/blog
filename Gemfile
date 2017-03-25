@@ -14,6 +14,9 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 #authentication
 gem 'devise'
+# editor
+gem 'tinymce-rails'
+gem 'tinymce-rails-langs'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
